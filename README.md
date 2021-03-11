@@ -1,2 +1,0 @@
-# blogtastic
-mock blog website
