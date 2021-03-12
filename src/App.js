@@ -30,15 +30,6 @@ const mapDispatchToProps = dispatch =>
   )
 
 class App extends Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      loading: true,
-      posts: [],
-      userPosts: this.props.userPosts,
-      myPosts: this.props.myPosts
-    }
-  }
 
   componentWillMount () {
     const { fetchPosts } = this.props
@@ -46,7 +37,7 @@ class App extends Component {
   }
 
   shouldComponentUpdate (nextProps, nextState) {
-    if (nextProps.posts !== this.props.posts) {
+    if (nextProps !== this.props) {
       return true
     }
   }

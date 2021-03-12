@@ -24,7 +24,7 @@ export const PostsCol = props => {
             </div>
           ))}
         {loading && <div className='post_title'>Loading...</div>}
-        {loading && (
+        {error && (
           <div className='post_error'>
             ERROR LOADING POSTS.
             <br /> TRY AGAIN LATER
